@@ -36,6 +36,12 @@ body{
 .mono{font-family:"IBM Plex Mono",ui-monospace,monospace; font-variant-numeric:tabular-nums}
 [hidden]{display:none !important}
 
+.bayat{display:flex; gap:11px; align-items:flex-start; padding:13px 18px;
+  background:var(--today-bg); color:var(--today); border-bottom:1px solid var(--today-edge)}
+.bayat.kirmizi{background:var(--late-bg); color:var(--late); border-bottom-color:var(--late-edge)}
+.bayat .ik{font-size:17px; line-height:1.35; flex:none}
+.bayat b{display:block; font-size:14.5px; font-weight:600; line-height:1.35}
+.bayat span{font-size:13px; line-height:1.45; opacity:.85}
 .hd{background:var(--surface); border-bottom:1px solid var(--line); padding:16px 18px 0}
 .hd h1{margin:0; font-size:18px; font-weight:600; letter-spacing:-.01em}
 .hd .sub{margin:3px 0 0; font-size:15px; color:var(--ink-2)}
@@ -111,6 +117,7 @@ body{
 <body>
 
 <div id="view-list">
+  <div class="bayat" id="bayat" hidden></div>
   <header class="hd">
     <h1>Atolye uretim listesi</h1>
     <p class="sub"><span class="mono" id="bugun"></span> &middot; <span id="toplam"></span></p>
@@ -133,7 +140,7 @@ body{
   <div id="d-body"></div>
 </div>
 
-<script id="veri" type="application/json">{"uretildi": "2026-08-27T17:03+03:00", "kalemler": [{"kalem": "34", "sku": "P007V10", "gauge": "16G (1.2mm)", "olcu": "iç çap 10mm", "tas": "—", "renk": "14K sarı", "notu": "", "durum": "Teslim Bekliyor", "teslim": "2026-08-26", "aile": "P007", "klasor": "https://drive.google.com/drive/folders/1VMnpEhDqhhJo8CTqMfgtOTD2wzm9xTTw", "kapak": "https://drive.google.com/thumbnail?id=1hus-SRUqSaJy0VKrQ0YntJj20BTGbh6A&sz=w1200"}, {"kalem": "34/1", "sku": "P007V10", "gauge": "16G (1.2mm)", "olcu": "iç çap 10mm", "tas": "—", "renk": "14K sarı", "notu": "", "durum": "Teslim Bekliyor", "teslim": "2026-08-26", "aile": "P007", "klasor": "https://drive.google.com/drive/folders/1VMnpEhDqhhJo8CTqMfgtOTD2wzm9xTTw", "kapak": "https://drive.google.com/thumbnail?id=1hus-SRUqSaJy0VKrQ0YntJj20BTGbh6A&sz=w1200"}, {"kalem": "35", "sku": "P033V03", "gauge": "18G (1.0mm)", "olcu": "iç çap 7mm", "tas": "—", "renk": "14K sarı", "notu": "", "durum": "Teslim Bekliyor", "teslim": "2026-08-27", "aile": "P033", "klasor": "https://drive.google.com/drive/folders/1jz1PHwlOsVUYK6j3YjD4gcdGo0qxNlyp", "kapak": "https://drive.google.com/thumbnail?id=14GhYs1sTQAfDuW0ZVsg7L1P6STZrTyQh&sz=w1200"}, {"kalem": "35/2", "sku": "P033V03", "gauge": "18G (1.0mm)", "olcu": "iç çap 7mm", "tas": "—", "renk": "14K sarı", "notu": "Stok için üretiliyor, müşteri siparişi değil.", "durum": "Teslim Bekliyor", "teslim": "2026-08-27", "aile": "P033", "klasor": "https://drive.google.com/drive/folders/1jz1PHwlOsVUYK6j3YjD4gcdGo0qxNlyp", "kapak": "https://drive.google.com/thumbnail?id=14GhYs1sTQAfDuW0ZVsg7L1P6STZrTyQh&sz=w1200"}, {"kalem": "37", "sku": "P031V11", "gauge": "18G (1.0mm)", "olcu": "6mm", "tas": "Lab Diamond", "renk": "14K sarı", "notu": "", "durum": "Teslim Bekliyor", "teslim": "2026-08-27", "aile": "P031", "klasor": "https://drive.google.com/drive/folders/1wvl-kiLan8ubuTXql1dMb0WyCuYQi-qn", "kapak": "https://drive.google.com/thumbnail?id=1kjijIhaea_ZGsOfL0oJoBIUQKkqBfR8V&sz=w1200"}, {"kalem": "40", "sku": "P033V03", "gauge": "18G (1.0mm)", "olcu": "iç çap 7mm", "tas": "—", "renk": "14K sarı", "notu": "", "durum": "Teslim Bekliyor", "teslim": "2026-08-27", "aile": "P033", "klasor": "https://drive.google.com/drive/folders/1jz1PHwlOsVUYK6j3YjD4gcdGo0qxNlyp", "kapak": "https://drive.google.com/thumbnail?id=14GhYs1sTQAfDuW0ZVsg7L1P6STZrTyQh&sz=w1200"}, {"kalem": "41", "sku": "P320V21", "gauge": "16G / 5mm bar", "olcu": "classic 4,3mm", "tas": "—", "renk": "14K beyaz", "notu": "", "durum": "Teslim Bekliyor", "teslim": "2026-08-27", "aile": "P320", "klasor": "https://drive.google.com/drive/folders/1CWxAHryAvqEFjPNT8pyceGcV7doO-I4k", "kapak": "https://drive.google.com/thumbnail?id=1QozI7t5MQJA_5cD3JK0jMhV4t29P3Lfp&sz=w1200"}, {"kalem": "38", "sku": "P033V11", "gauge": "16G (1.2mm)", "olcu": "iç çap 9mm", "tas": "—", "renk": "14K sarı", "notu": "", "durum": "Teslim Bekliyor", "teslim": "2026-08-28", "aile": "P033", "klasor": "https://drive.google.com/drive/folders/1jz1PHwlOsVUYK6j3YjD4gcdGo0qxNlyp", "kapak": "https://drive.google.com/thumbnail?id=14GhYs1sTQAfDuW0ZVsg7L1P6STZrTyQh&sz=w1200"}, {"kalem": "39", "sku": "P031V18", "gauge": "16G (1.2mm)", "olcu": "10mm", "tas": "Lab Diamond", "renk": "14K sarı", "notu": "", "durum": "Teslim Bekliyor", "teslim": "2026-08-31", "aile": "P031", "klasor": "https://drive.google.com/drive/folders/1wvl-kiLan8ubuTXql1dMb0WyCuYQi-qn", "kapak": "https://drive.google.com/thumbnail?id=1kjijIhaea_ZGsOfL0oJoBIUQKkqBfR8V&sz=w1200"}, {"kalem": "39/1", "sku": "P031V17", "gauge": "16G (1.2mm)", "olcu": "8mm", "tas": "Lab Diamond", "renk": "14K sarı", "notu": "", "durum": "Teslim Bekliyor", "teslim": "2026-08-31", "aile": "P031", "klasor": "https://drive.google.com/drive/folders/1wvl-kiLan8ubuTXql1dMb0WyCuYQi-qn", "kapak": "https://drive.google.com/thumbnail?id=1kjijIhaea_ZGsOfL0oJoBIUQKkqBfR8V&sz=w1200"}]}</script>
+<script id="veri" type="application/json">{"uretildi": "2026-08-28T00:43+03:00", "kalemler": [{"kalem": "34", "sku": "P007V10", "gauge": "16G (1.2mm)", "olcu": "iç çap 10mm", "tas": "—", "renk": "14K sarı", "notu": "", "durum": "Teslim Bekliyor", "teslim": "2026-08-26", "aile": "P007", "klasor": "https://drive.google.com/drive/folders/1VMnpEhDqhhJo8CTqMfgtOTD2wzm9xTTw", "kapak": "https://drive.google.com/thumbnail?id=1hus-SRUqSaJy0VKrQ0YntJj20BTGbh6A&sz=w1200"}, {"kalem": "34/1", "sku": "P007V10", "gauge": "16G (1.2mm)", "olcu": "iç çap 10mm", "tas": "—", "renk": "14K sarı", "notu": "", "durum": "Teslim Bekliyor", "teslim": "2026-08-26", "aile": "P007", "klasor": "https://drive.google.com/drive/folders/1VMnpEhDqhhJo8CTqMfgtOTD2wzm9xTTw", "kapak": "https://drive.google.com/thumbnail?id=1hus-SRUqSaJy0VKrQ0YntJj20BTGbh6A&sz=w1200"}, {"kalem": "35", "sku": "P033V03", "gauge": "18G (1.0mm)", "olcu": "iç çap 7mm", "tas": "—", "renk": "14K sarı", "notu": "", "durum": "Teslim Bekliyor", "teslim": "2026-08-27", "aile": "P033", "klasor": "https://drive.google.com/drive/folders/1jz1PHwlOsVUYK6j3YjD4gcdGo0qxNlyp", "kapak": "https://drive.google.com/thumbnail?id=14GhYs1sTQAfDuW0ZVsg7L1P6STZrTyQh&sz=w1200"}, {"kalem": "35/2", "sku": "P033V03", "gauge": "18G (1.0mm)", "olcu": "iç çap 7mm", "tas": "—", "renk": "14K sarı", "notu": "Stok için üretiliyor, müşteri siparişi değil.", "durum": "Teslim Bekliyor", "teslim": "2026-08-27", "aile": "P033", "klasor": "https://drive.google.com/drive/folders/1jz1PHwlOsVUYK6j3YjD4gcdGo0qxNlyp", "kapak": "https://drive.google.com/thumbnail?id=14GhYs1sTQAfDuW0ZVsg7L1P6STZrTyQh&sz=w1200"}, {"kalem": "37", "sku": "P031V11", "gauge": "18G (1.0mm)", "olcu": "6mm", "tas": "Lab Diamond", "renk": "14K sarı", "notu": "", "durum": "Teslim Bekliyor", "teslim": "2026-08-27", "aile": "P031", "klasor": "https://drive.google.com/drive/folders/1wvl-kiLan8ubuTXql1dMb0WyCuYQi-qn", "kapak": "https://drive.google.com/thumbnail?id=1kjijIhaea_ZGsOfL0oJoBIUQKkqBfR8V&sz=w1200"}, {"kalem": "40", "sku": "P033V03", "gauge": "18G (1.0mm)", "olcu": "iç çap 7mm", "tas": "—", "renk": "14K sarı", "notu": "", "durum": "Teslim Bekliyor", "teslim": "2026-08-27", "aile": "P033", "klasor": "https://drive.google.com/drive/folders/1jz1PHwlOsVUYK6j3YjD4gcdGo0qxNlyp", "kapak": "https://drive.google.com/thumbnail?id=14GhYs1sTQAfDuW0ZVsg7L1P6STZrTyQh&sz=w1200"}, {"kalem": "41", "sku": "P320V21", "gauge": "16G / 5mm bar", "olcu": "classic 4,3mm", "tas": "—", "renk": "14K beyaz", "notu": "", "durum": "Teslim Bekliyor", "teslim": "2026-08-27", "aile": "P320", "klasor": "https://drive.google.com/drive/folders/1CWxAHryAvqEFjPNT8pyceGcV7doO-I4k", "kapak": "https://drive.google.com/thumbnail?id=1QozI7t5MQJA_5cD3JK0jMhV4t29P3Lfp&sz=w1200"}, {"kalem": "38", "sku": "P033V11", "gauge": "16G (1.2mm)", "olcu": "iç çap 9mm", "tas": "—", "renk": "14K sarı", "notu": "", "durum": "Teslim Bekliyor", "teslim": "2026-08-28", "aile": "P033", "klasor": "https://drive.google.com/drive/folders/1jz1PHwlOsVUYK6j3YjD4gcdGo0qxNlyp", "kapak": "https://drive.google.com/thumbnail?id=14GhYs1sTQAfDuW0ZVsg7L1P6STZrTyQh&sz=w1200"}, {"kalem": "39", "sku": "P031V18", "gauge": "16G (1.2mm)", "olcu": "10mm", "tas": "Lab Diamond", "renk": "14K sarı", "notu": "", "durum": "Teslim Bekliyor", "teslim": "2026-08-31", "aile": "P031", "klasor": "https://drive.google.com/drive/folders/1wvl-kiLan8ubuTXql1dMb0WyCuYQi-qn", "kapak": "https://drive.google.com/thumbnail?id=1kjijIhaea_ZGsOfL0oJoBIUQKkqBfR8V&sz=w1200"}, {"kalem": "39/1", "sku": "P031V17", "gauge": "16G (1.2mm)", "olcu": "8mm", "tas": "Lab Diamond", "renk": "14K sarı", "notu": "", "durum": "Teslim Bekliyor", "teslim": "2026-08-31", "aile": "P031", "klasor": "https://drive.google.com/drive/folders/1wvl-kiLan8ubuTXql1dMb0WyCuYQi-qn", "kapak": "https://drive.google.com/thumbnail?id=1kjijIhaea_ZGsOfL0oJoBIUQKkqBfR8V&sz=w1200"}]}</script>
 <script>
 const METAL = {"14K sarı":"#D4AF37","14K beyaz":"#CDD1D4","14K rose":"#DBA48D"};
 const AY = ["ocak","şubat","mart","nisan","mayıs","haziran","temmuz","ağustos","eylül","ekim","kasım","aralık"];
@@ -220,7 +227,26 @@ function geri(){
   window.scrollTo(0,0);
 }
 
+function bayatlik(){
+  const el = document.getElementById("bayat");
+  const u = new Date(D.uretildi);
+  if(isNaN(u)) return;
+  const saat = (Date.now() - u.getTime()) / 3600000;
+  if(saat < 24) return;
+  const gun = Math.floor(saat / 24);
+  const ne = gun === 1 ? "dün" : gun + " gün önce";
+  const kirmizi = gun >= 3;
+  el.className = "bayat" + (kirmizi ? " kirmizi" : "");
+  el.innerHTML = `<span class="ik" aria-hidden="true">${kirmizi ? "&#9888;" : "&#9432;"}</span>` +
+    `<span><b>Bu liste ${ne} güncellendi.</b>` +
+    `<span>${kirmizi
+      ? "Aradan zaman geçti — yeni siparişler ve değişiklikler bu listede olmayabilir. Devam etmeden önce sorun."
+      : "O tarihten sonra gelen siparişler burada görünmüyor olabilir."}</span></span>`;
+  el.hidden = false;
+}
+
 liste();
+bayatlik();
 document.addEventListener("click", e => {
   const t = e.target.closest("[data-k]");
   if(t) detay(t.dataset.k);
