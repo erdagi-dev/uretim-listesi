@@ -117,6 +117,11 @@ body{
 .rd .eks{color:var(--late); font-weight:600}
 .chev{color:var(--ink-3); font-size:15px; flex:none}
 .warn{width:8px; height:8px; border-radius:50%; background:var(--late); flex:none}
+/* Özel sipariş (SKU versiyonu C ile başlar). Marka rengi: uyarı değil, dikkat. */
+.oz{font-size:10.5px; font-weight:700; letter-spacing:.1em; color:var(--surface);
+  background:var(--marka); padding:1px 7px 2px; border-radius:3px; align-self:center}
+.ozban{padding:11px 18px; background:var(--marka); color:var(--surface); text-align:center;
+  font-size:13px; font-weight:700; letter-spacing:.16em; text-transform:uppercase}
 
 .back{display:flex; align-items:center; gap:9px; width:100%; background:var(--surface);
   border:0; border-bottom:1px solid var(--line-strong); padding:15px 18px;
@@ -163,6 +168,9 @@ body{
 }
 .note{margin:16px 18px 0; padding:12px 14px; border-radius:4px;
   background:var(--late-bg); color:var(--late); font-size:14px; line-height:1.5; font-weight:500}
+.note.ust{margin:12px 18px}
+.note .nb{display:block; font-size:11px; font-weight:700; letter-spacing:.11em;
+  text-transform:uppercase; margin-bottom:4px; opacity:.85}
 .ft{padding:26px 18px 34px; color:var(--ink-3); font-size:11.5px; line-height:1.7; border-top:1px solid var(--line)}
 #view-detail{padding-bottom:34px}
 </style>
@@ -198,7 +206,7 @@ body{
   <div id="d-body"></div>
 </div>
 
-<script id="veri" type="application/json">{"uretildi": "2026-09-25T09:30+03:00", "kalemler": [{"kalem": "100", "sku": "P031V33", "gauge": "18G (1.0mm)", "olcu": "7mm", "tas": "Natural Diamond", "tas_olcu": "", "renk": "14K beyaz", "notu": "", "durum": "Tarih Bekleniyor", "teslim": "", "yarim": "", "aile": "P031", "klasor": "https://drive.google.com/drive/folders/1wvl-kiLan8ubuTXql1dMb0WyCuYQi-qn", "kapak": "https://drive.google.com/thumbnail?id=1kjijIhaea_ZGsOfL0oJoBIUQKkqBfR8V&sz=w1200"}, {"kalem": "99", "sku": "P031V12", "gauge": "18G (1.0mm)", "olcu": "8mm", "tas": "Lab Diamond", "tas_olcu": "", "renk": "14K sarı", "notu": "", "durum": "Tarih Bekleniyor", "teslim": "", "yarim": "", "aile": "P031", "klasor": "https://drive.google.com/drive/folders/1wvl-kiLan8ubuTXql1dMb0WyCuYQi-qn", "kapak": "https://drive.google.com/thumbnail?id=1kjijIhaea_ZGsOfL0oJoBIUQKkqBfR8V&sz=w1200"}, {"kalem": "97", "sku": "P031V21", "gauge": "18G (1.0mm)", "olcu": "6mm", "tas": "Natural Diamond", "tas_olcu": "", "renk": "14K sarı", "notu": "", "durum": "Tarih Bekleniyor", "teslim": "2026-09-25", "yarim": "öğleden sonra", "aile": "P031", "klasor": "https://drive.google.com/drive/folders/1wvl-kiLan8ubuTXql1dMb0WyCuYQi-qn", "kapak": "https://drive.google.com/thumbnail?id=1kjijIhaea_ZGsOfL0oJoBIUQKkqBfR8V&sz=w1200"}, {"kalem": "97/2", "sku": "P031V26", "gauge": "16G (1.2mm)", "olcu": "6mm", "tas": "Natural Diamond", "tas_olcu": "", "renk": "14K sarı", "notu": "", "durum": "Tarih Bekleniyor", "teslim": "2026-09-25", "yarim": "öğleden sonra", "aile": "P031", "klasor": "https://drive.google.com/drive/folders/1wvl-kiLan8ubuTXql1dMb0WyCuYQi-qn", "kapak": "https://drive.google.com/thumbnail?id=1kjijIhaea_ZGsOfL0oJoBIUQKkqBfR8V&sz=w1200"}, {"kalem": "95", "sku": "PS001", "gauge": "16G (1.2mm)", "olcu": "10mm", "tas": "—", "tas_olcu": "", "renk": "14K sarı", "notu": "", "durum": "Tarih Bekleniyor", "teslim": "2026-09-28", "yarim": "öğleden sonra", "aile": "", "klasor": "", "kapak": ""}, {"kalem": "95/2", "sku": "PS002", "gauge": "16G (1.2mm)", "olcu": "10mm", "tas": "—", "tas_olcu": "", "renk": "14K sarı", "notu": "", "durum": "Tarih Bekleniyor", "teslim": "2026-09-28", "yarim": "öğleden sonra", "aile": "", "klasor": "", "kapak": ""}, {"kalem": "96", "sku": "P024V02", "gauge": "", "olcu": "iç çap 7mm", "tas": "—", "tas_olcu": "", "renk": "14K sarı", "notu": "SİPARİŞTE YOK, TEYİT EDİLMELİ: gauge", "durum": "Tarih Bekleniyor", "teslim": "2026-09-29", "yarim": "öğleden sonra", "aile": "P024", "klasor": "https://drive.google.com/drive/folders/1oEZv69Xx5DAun4LBIhihANJfxNbQrqEI", "kapak": "https://drive.google.com/thumbnail?id=1vhLLRnmjQ1v7ciO2rVSkyV4ojo4CGMQ-&sz=w1200"}, {"kalem": "98", "sku": "P353V61", "gauge": "16G / 5mm bar", "olcu": "5mm bar boyu", "tas": "Lab Diamond", "tas_olcu": "2,00mm", "renk": "14K sarı", "notu": "", "durum": "Tarih Bekleniyor", "teslim": "2026-09-29", "yarim": "öğleden sonra", "aile": "P353", "klasor": "https://drive.google.com/drive/folders/1GZtK72bnln1eldqB36gFBEhX3a_EQMBA", "kapak": "https://drive.google.com/thumbnail?id=1MReuDAlvX_UnrJmQ36umHl9C_fuq04F5&sz=w1200"}]}</script>
+<script id="veri" type="application/json">{"uretildi": "2026-09-25T15:25+03:00", "kalemler": [{"kalem": "101", "sku": "P031C001", "ozel": true, "gauge": "16G (1.2mm)", "olcu": "10mm", "tas": "round cut rainbow sapphire", "tas_olcu": "", "renk": "14K sarı", "notu": "Taşların her biri 2'şer mm olacak.", "durum": "Tarih Bekleniyor", "teslim": "", "yarim": "", "aile": "P031", "klasor": "https://drive.google.com/drive/folders/1wvl-kiLan8ubuTXql1dMb0WyCuYQi-qn", "kapak": "https://drive.google.com/thumbnail?id=1kjijIhaea_ZGsOfL0oJoBIUQKkqBfR8V&sz=w1200"}, {"kalem": "97", "sku": "P031V21", "ozel": false, "gauge": "18G (1.0mm)", "olcu": "6mm", "tas": "Natural Diamond", "tas_olcu": "", "renk": "14K sarı", "notu": "", "durum": "Tarih Bekleniyor", "teslim": "2026-09-25", "yarim": "öğleden sonra", "aile": "P031", "klasor": "https://drive.google.com/drive/folders/1wvl-kiLan8ubuTXql1dMb0WyCuYQi-qn", "kapak": "https://drive.google.com/thumbnail?id=1kjijIhaea_ZGsOfL0oJoBIUQKkqBfR8V&sz=w1200"}, {"kalem": "97/2", "sku": "P031V26", "ozel": false, "gauge": "16G (1.2mm)", "olcu": "6mm", "tas": "Natural Diamond", "tas_olcu": "", "renk": "14K sarı", "notu": "", "durum": "Tarih Bekleniyor", "teslim": "2026-09-25", "yarim": "öğleden sonra", "aile": "P031", "klasor": "https://drive.google.com/drive/folders/1wvl-kiLan8ubuTXql1dMb0WyCuYQi-qn", "kapak": "https://drive.google.com/thumbnail?id=1kjijIhaea_ZGsOfL0oJoBIUQKkqBfR8V&sz=w1200"}, {"kalem": "95", "sku": "PS001", "ozel": true, "gauge": "16G (1.2mm)", "olcu": "10mm", "tas": "—", "tas_olcu": "", "renk": "14K sarı", "notu": "", "durum": "Tarih Bekleniyor", "teslim": "2026-09-28", "yarim": "öğleden sonra", "aile": "", "klasor": "", "kapak": ""}, {"kalem": "95/2", "sku": "PS002", "ozel": true, "gauge": "16G (1.2mm)", "olcu": "10mm", "tas": "—", "tas_olcu": "", "renk": "14K sarı", "notu": "", "durum": "Tarih Bekleniyor", "teslim": "2026-09-28", "yarim": "öğleden sonra", "aile": "", "klasor": "", "kapak": ""}, {"kalem": "100", "sku": "P031V33", "ozel": false, "gauge": "18G (1.0mm)", "olcu": "7mm", "tas": "Natural Diamond", "tas_olcu": "", "renk": "14K beyaz", "notu": "", "durum": "Tarih Bekleniyor", "teslim": "2026-09-29", "yarim": "öğleden sonra", "aile": "P031", "klasor": "https://drive.google.com/drive/folders/1wvl-kiLan8ubuTXql1dMb0WyCuYQi-qn", "kapak": "https://drive.google.com/thumbnail?id=1kjijIhaea_ZGsOfL0oJoBIUQKkqBfR8V&sz=w1200"}, {"kalem": "96", "sku": "P024V02", "ozel": false, "gauge": "", "olcu": "iç çap 7mm", "tas": "—", "tas_olcu": "", "renk": "14K sarı", "notu": "SİPARİŞTE YOK, TEYİT EDİLMELİ: gauge", "durum": "Tarih Bekleniyor", "teslim": "2026-09-29", "yarim": "öğleden sonra", "aile": "P024", "klasor": "https://drive.google.com/drive/folders/1oEZv69Xx5DAun4LBIhihANJfxNbQrqEI", "kapak": "https://drive.google.com/thumbnail?id=1vhLLRnmjQ1v7ciO2rVSkyV4ojo4CGMQ-&sz=w1200"}, {"kalem": "98", "sku": "P353V61", "ozel": false, "gauge": "16G / 5mm bar", "olcu": "5mm bar boyu", "tas": "Lab Diamond", "tas_olcu": "2,00mm", "renk": "14K sarı", "notu": "", "durum": "Tarih Bekleniyor", "teslim": "2026-09-29", "yarim": "öğleden sonra", "aile": "P353", "klasor": "https://drive.google.com/drive/folders/1GZtK72bnln1eldqB36gFBEhX3a_EQMBA", "kapak": "https://drive.google.com/thumbnail?id=1MReuDAlvX_UnrJmQ36umHl9C_fuq04F5&sz=w1200"}, {"kalem": "99", "sku": "P031V12", "ozel": false, "gauge": "18G (1.0mm)", "olcu": "8mm", "tas": "Lab Diamond", "tas_olcu": "", "renk": "14K sarı", "notu": "", "durum": "Tarih Bekleniyor", "teslim": "2026-09-29", "yarim": "öğleden sonra", "aile": "P031", "klasor": "https://drive.google.com/drive/folders/1wvl-kiLan8ubuTXql1dMb0WyCuYQi-qn", "kapak": "https://drive.google.com/thumbnail?id=1kjijIhaea_ZGsOfL0oJoBIUQKkqBfR8V&sz=w1200"}]}</script>
 <script>
 const METAL = {"14K sarı":"#D4AF37","14K beyaz":"#CDD1D4","14K rose":"#DBA48D"};
 const AY = ["ocak","şubat","mart","nisan","mayıs","haziran","temmuz","ağustos","eylül","ekim","kasım","aralık"];
@@ -280,7 +288,8 @@ function liste(){
     g.satir.map(k =>
       `<button class="row r-${k.cls}" type="button" data-k="${esc(k.kalem)}">${sw(k.renk)}` +
       `<span class="rc"><span class="rt"><span class="no mono">${esc(k.kalem)}</span>` +
-      `<span class="sku mono">${esc(k.sku)}</span></span>` +
+      `<span class="sku mono">${esc(k.sku)}</span>` +
+      (k.ozel ? `<span class="oz">ÖZEL</span>` : "") + `</span>` +
       `<span class="rd">${satirOzet(k)}</span></span>` +
       (k.notu ? `<span class="warn"></span>` : "") +
       `<span class="chev" aria-hidden="true">&rsaquo;</span></button>`).join("") +
@@ -295,6 +304,9 @@ function detay(no, gecmiseEkle){
   if(gecmiseEkle !== false) history.pushState({k: no}, "", "#" + encodeURIComponent(no));
   const f = fark(k.teslim), [lb, cls] = etiket(f);
   document.getElementById("d-shot").innerHTML =
+    // Özel siparişte not, şeridin hemen altında — fotoğraftan önce (25.09.2026)
+    (k.ozel ? `<div class="ozban">Özel sipariş</div>` +
+      (k.notu ? `<p class="note ust"><b class="nb">Üreticiye not</b>${esc(k.notu)}</p>` : "") : "") +
     (k.kapak ? `<div class="gal"><img src="${esc(kucult(k.kapak))}" alt="${esc(k.sku)}"></div>` : "") +
     (k.klasor ? `<a class="drv" href="${esc(k.klasor)}" target="_blank" rel="noopener">` +
       `<span class="ik" aria-hidden="true">&#128247;</span><b>Tüm fotoğrafları aç</b>` +
@@ -316,7 +328,7 @@ function detay(no, gecmiseEkle){
     `<div><dt>Renk</dt>${k.renk
         ? `<dd class="renk">${sw(k.renk)}${esc(k.renk)}</dd>`
         : `<dd>${YOK}</dd>`}</div></dl>` +
-    (k.notu ? `<p class="note">${esc(k.notu)}</p>` : "");
+    (k.notu && !k.ozel ? `<p class="note"><b class="nb">Üreticiye not</b>${esc(k.notu)}</p>` : "");
   document.getElementById("view-list").hidden = true;
   document.getElementById("view-detail").hidden = false;
   window.scrollTo(0,0);
